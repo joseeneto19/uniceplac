@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Visualização de Usuários</title>
+<title>Visualização de Alunos</title>
 </head>
 <body>
 	<%@ page import="com.uniceplac.dao.UsuarioDao, com.uniceplac.bean.Usuario, java.util.*" %>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	
-	<h1>Listagem de Usuários</h1>
+	<h1>Listagem de Alunos</h1>
 	
 	<%
     List<Usuario> list = UsuarioDao.getAllUsuarios();
@@ -38,6 +38,6 @@
 		</c:forEach>
 	</table>
 	<br>
-	<a href="#">Adicionar novo Usuário</a>
+	<a href="addusuarioform.jsp">Adicionar novo Aluno</a>
 </body>
 </html>

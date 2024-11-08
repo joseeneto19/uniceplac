@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edição do Usuário</title>
+<title>Edição do Aluno</title>
 </head>
 <body>
 	<%@page import="com.uniceplac.bean.Usuario, com.uniceplac.dao.UsuarioDao" %>
