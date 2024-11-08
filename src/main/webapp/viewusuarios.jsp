@@ -33,7 +33,7 @@
 				<td>${usuario.getEmail()}</td>
 				<td>${usuario.getCurso()}</td>
 				<td><a href="editform.jsp?id=${usuario.getId()}">Editar</a></td>
-				<td><a href="#">Deletar</a></td>
+				<td><a href="deleteusuario.jsp?id=${usuario.getId()}">Deletar</a></td>
 			</tr>
 		</c:forEach>
 	</table>
