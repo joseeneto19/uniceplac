@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.protocol.Resultset;
 import com.uniceplac.bean.Usuario;
 
 public class UsuarioDao {
