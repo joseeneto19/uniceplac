@@ -24,6 +24,51 @@ public class UsuarioDao {
 		return con;
 	}
 	
+	
+	public static Usuario getRegistroById(int id) {
+		Usuario usuario = null;
+		
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT * FROM usuario WHERE id=?");
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				usuario = new Usuario();
+				usuario.setId(rs.getInt("id"));
+				usuario.setMatricula(rs.getInt("matricula"));
+				usuario.setNome(rs.getString("nome"));
+				usuario.setEmail(rs.getString("email"));
+				usuario.setCurso(rs.getString("curso"));
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return usuario;
+	}
+	
+	public static int  updateUsuario(Usuario u) {
+		int status = 0;
+		
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = (PreparedStatement) con.prepareStatement("UPDATE usuario SET matricula=?,"
+					+ " nome=?, email=?, curso=? WHERE id=?");
+			ps.setInt(1, u.getMatricula());
+			ps.setString(2, u.getNome());
+			ps.setString(3, u.getEmail());
+			ps.setString(4, u.getCurso());
+			ps.setInt(5, u.getId());
+			status = ps.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return status;
+	}
+	
+	
 	public static List<Usuario> getAllUsuarios(){
 		List<Usuario> list = new ArrayList<Usuario>();
 		
