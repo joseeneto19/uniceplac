@@ -6,16 +6,12 @@
 
 	int i = UsuarioDao.salvarUsuario(u);
 
+	
 	if(i > 0) {
-		response.sendRedirect("addusuario-sucess.jsp");
+		response.sendRedirect("veralunos.jsp");
 	} else {
-		response.sendRedirect("addusuario-error.jsp");
+		response.sendRedirect("error.jsp");
 	}
-
-
-
-
-
 
 
 %>

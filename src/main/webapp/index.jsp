@@ -14,6 +14,7 @@
     <title>Uniceplac</title>
 
 
+
     <style>
         body {
             background: linear-gradient(to bottom right, #007B5F, #A1CDA8);
@@ -67,8 +68,8 @@
 
     <div class="container">
         <h1>UNICEPLAC</h1>
-        <button class="btn btn-custom" onclick="window.location.href='adicionarlivro.jsp'">ADICIONAR ALUNO</button>
-        <button class="btn btn-custom" onclick="window.location.href='listalivros.jsp'">VER ALUNOS</button>
+        <button class="btn btn-custom" onclick="window.location.href='cadastraraluno.jsp'">ADICIONAR ALUNO</button>
+        <button class="btn btn-custom" onclick="window.location.href='veralunos.jsp'">VER ALUNOS</button>
     </div>
 
 

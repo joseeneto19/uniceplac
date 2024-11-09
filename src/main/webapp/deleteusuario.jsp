@@ -4,7 +4,7 @@
 
 <%
 UsuarioDao.deleteUsuario(u);
-response.sendRedirect("viewusuarios.jsp");
+response.sendRedirect("veralunos.jsp");
 
 
 
