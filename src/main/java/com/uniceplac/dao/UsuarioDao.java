@@ -133,6 +133,56 @@ public class UsuarioDao {
 		return list;
 	}
 	
+	public static List<Usuario> searchUsuarios(String searchTerm) {
+	    List<Usuario> list = new ArrayList<>();
+	    try {
+	        Connection con = getConnection();
+	        
+	        // Construindo a consulta SQL que cobre nome, matrícula e ID
+	        String sql = "SELECT * FROM usuario WHERE nome LIKE ? OR matricula = ? OR id = ?";
+	        PreparedStatement ps = con.prepareStatement(sql);
+	        
+	        // Configurando os parâmetros da consulta
+	        ps.setString(1, "%" + searchTerm + "%");
+	        
+	        // Tentando interpretar o termo de pesquisa como número para matrícula e ID
+	        int numero = 0;
+	        try {
+	            numero = Integer.parseInt(searchTerm);
+	        } catch (NumberFormatException e) {
+	            // Caso não seja um número, ele vai usar 0, que não coincidirá com nenhum ID ou matrícula válida
+	        }
+	        
+	        // Definindo o mesmo número para matrícula e ID
+	        ps.setInt(2, numero); // Para campo 'matricula'
+	        ps.setInt(3, numero); // Para campo 'id'
+
+	        ResultSet rs = ps.executeQuery();
+
+	        // Processando os resultados da pesquisa
+	        while (rs.next()) {
+	            Usuario usuario = new Usuario();
+	            usuario.setId(rs.getInt("id"));
+	            usuario.setMatricula(rs.getInt("matricula"));
+	            usuario.setNome(rs.getString("nome"));
+	            usuario.setEmail(rs.getString("email"));
+	            usuario.setCurso(rs.getString("curso"));
+	            list.add(usuario);
+	        }
+	        
+	        // Fechando os recursos
+	        rs.close();
+	        ps.close();
+	        con.close();
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return list;
+	}
+
+
+
 	
 	
 	
