@@ -14,7 +14,7 @@
 
     <style>
         body {
-            background: linear-gradient(to bottom right, #4B0082, #87CEFA);
+            background: linear-gradient(to bottom right, #007B5F, #A1CDA8);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -34,7 +34,7 @@
         }
 
         h1 {
-            color: #4B0082;
+            color: #007B5F;
             font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
@@ -53,17 +53,17 @@
         }
 
         th {
-            background-color: #4B0082;
+            background-color: #007B5F;
             color: white;
         }
 
         td {
-            color: #00008B;
+            color: #007B5F;
         }
 
         .btn-custom {
-            background-color: #6A5ACD;
-            border-color: #6A5ACD;
+            background-color: #FF7300;
+            border-color: #FF7300;
             color: white;
             font-weight: bold;
             text-decoration: none;
@@ -72,21 +72,30 @@
             display: inline-block;
             margin-top: 10px;
         }
-
+        
+        .btn-custom:link,
+		.btn-custom:visited {
+    		color: white;
+    		background-color: #FF7300;
+    		border-color: #FF7300;
+    		text-decoration: none;
+		}
+		
         .btn-custom:hover {
-            background-color: #483D8B;
-            border-color: #483D8B;
+            background-color: #E65C00;
+            border-color: #E65C00;
+            text-decoration: none;
         }
 
         .action-links a {
-            color: #4B0082;
+            color: #007B5F;
             font-weight: bold;
             margin: 0 5px;
             text-decoration: none;
         }
 
         .action-links a:hover {
-            color: #6A5ACD;
+            color: #005F4A;
         }
     </style>
 </head>
@@ -94,7 +103,7 @@
 <body>
 
     <div class="container">
-        <h1>Listagem de Livros</h1>
+        <h1>Listagem de Alunos</h1>
 
         <%@ page import="com.uniceplac.dao.UsuarioDao, com.uniceplac.bean.Usuario, java.util.*" %>
         <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -159,7 +168,7 @@
             </tbody>
         </table>
 
-        <a href="adicionarlivro.jsp" class="btn-custom">Adicionar novo livro</a>
+        <a href="cadastraraluno.jsp" class="btn-custom">Adicionar novo livro</a>
     </div>
 
 

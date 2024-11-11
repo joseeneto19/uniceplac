@@ -85,7 +85,7 @@
 <body>
 
     <div class="container">
-        <h1>Edição de Livro</h1>
+        <h1>Editar Aluno</h1>
 
 
         <%@page import="com.uniceplac.bean.Usuario, com.uniceplac.dao.UsuarioDao" %>
@@ -115,7 +115,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: center;">
-                        <button type="submit" class="btn-custom">Editar usuário</button>
+                        <button type="submit" class="btn-custom">Editar aluno</button>
                     </td>
                 </tr>
             </table>
