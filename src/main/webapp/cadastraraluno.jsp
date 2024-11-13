@@ -71,7 +71,7 @@
 
         .form-control {
             background-color: #f2f2f2;
-            color: #00008B;
+            color: black;
             border-radius: 5px;
             border: 1px solid #ced4da;
         }
