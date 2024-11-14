@@ -30,7 +30,7 @@
 
 <h2>📥 Downloads</h2>
 <ul>
-  <li>Projeto: </li>
+  <li>Projeto: https://github.com/joseeneto19/uniceplac.git</li>
   <li>Banco de dados: https://abrir.link/OctKu </li>
   
 </ul>
