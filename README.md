@@ -3,10 +3,10 @@
 
 <h2>🌟 Funcionalidades</h2>
 <ul> 
-  <li>Cadastro de Aluno: Permite cadastrar um novo aluno, inserindo dados como matrícula, nome, email e curso.</li>
-  <li>Consulta de Alunos: Exibe a lista completa de alunos cadastrados.</li>
-  <li>Atualização de Dados: Possibilita a edição de informações de um aluno já cadastrado.</li>
-  <li>Exclusão de Registro: Remove o registro de um aluno do sistema.</li>
+  <li><strong>Cadastro de Aluno</strong> - Permite cadastrar um novo aluno, inserindo dados como matrícula, nome, email e curso.</li>
+  <li><strong>Consulta de Alunos</strong> - Exibe a lista completa de alunos cadastrados.</li>
+  <li><strong>Atualização de Dados</strong> - Possibilita a edição de informações de um aluno já cadastrado.</li>
+  <li><strong>Exclusão de Registro</strong> - Remove o registro de um aluno do sistema.</li>
 </ul>
 
 <h2>🛠 Tecnologias Utilizadas</h2>
